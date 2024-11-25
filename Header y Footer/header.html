@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+</head>
+<body>
+    <div id="header">
+        <a class="Logo" href="../Principal/index.html">
+            <img src="../imagenes/Logo_ruta6.png" class="logo_ruta">
+        </a>
+        <div class="menu-container">
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">&#8801</label>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="../Nosotros/nosotros.html">Nosotros</a>
+                <a href="../Eventos/Eventos.html">Eventos</a>
+                <a href="../Locales/Locales.html">Locales</a>
+                <a href="../Contactanos/contacto.html">Contactanos</a>
+        
+                <!--Submenu-->
+                <div class="submenu-container">
+                    <a href="#" class="Ingresar">Ingresar</a>
+                    <ul class="submenu">
+                        <li><a href="../Login y Register/login.html">Iniciar Sesión</a></li>
+                        <li><a href="../Login y Register/register.html">Registrarse</a></li>
+                    </ul>
+                </div>
+    
+                <div class="carrito-compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>S/.0.00</p>
+                </div>
+                <label for="check" class="esconder-menu">&#215</label>
+            </nav>
+        </div>
+    </div>
+
+    <!--Mini Pnatalla del carrito-->
+    <div class="contenedor-carrito oculto" id="carrito-modal">
+        <div class="encabezado-carrito">
+            <h1>CARRITO DE COMPRAS</h1>
+            <button class="cerrar-carrito" id="cerrar-carrito">&times;</button> <!-- Botón de cierre -->
+        </div>
+        <div class="barra-informacion">
+            <span>Items: <span id="cantidad-items">2</span></span>
+            <button class="boton-borrar-todo">
+                <img src="../imagenes/X-Shape-Free-PNG-Image.png" alt="icono borrar" class="icono-borrar"> Borrar todo
+            </button>
+        </div>
+        <div class="productos-carrito">
+            <div class="producto" data-precio="1.50">
+                <div class="contenido-producto">
+                    <img src="../imagenes/restaurantes/Platos/Saiko/MakiFurai.jpeg" alt="Producto" class="imagen-producto">
+                    <div class="informacion-producto">
+                        <h2>Maki Furai</h2>
+                        <p class="enlace-informacion">Ver información</p>
+                        <p class="precio-producto">S/ <span class="precio">21.50</span></p>
+                        <div class="descripcion" style="display: none;">Descrición del plato.</div>
+                    </div>
+                    <div class="cantidad-producto">
+                        <button class="boton-disminuir">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="boton-aumentar">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto" data-precio="21.50">
+                <div class="contenido-producto">
+                    <img src="../imagenes/restaurantes/Platos/Oralebuey/TacoElbuey.jpeg" alt="Producto" class="imagen-producto">
+                    <div class="informacion-producto">
+                        <h2>El buey</h2>
+                        <p class="enlace-informacion">Ver información</p>
+                        <p class="precio-producto">S/ <span class="precio">13.50</span></p>
+                        <div class="descripcion" style="display: none;">Descrición del plato.</div>
+                    </div>
+                    <div class="cantidad-producto">
+                        <button class="boton-disminuir">-</button>
+                        <span class="cantidad">0</span>
+                        <button class="boton-aumentar">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pie-carrito">
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <span>S/ <span id="subtotal">66.00</span></span>
+            </div>
+            <p class="informacion-descuento">Los descuentos se aplican automáticamente</p>
+            <button class="boton-comprar" id="continuar-compra">CONTINUAR CON LA COMPRA</button>
+        </div>
+    </div>
+
+    <script src="header.js"></script>
+</body>
+</html>

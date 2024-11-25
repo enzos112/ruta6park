@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: kadwa;
+}
+
+header, #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    border-bottom: 2px solid black;
+    height: 70px;
+    width: 100%;
+}
+
+.Logo{
+    padding: 0 20px;
+}
+
+
+.logo_ruta {
+    cursor: pointer;
+    width: 150px;
+    height: max-content;
+}
+
+.menu-container{
+    margin-left: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos normales del menú */
+.menu a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0 20px;
+    transition: 0.4s;
+}
+
+.menu a.Ingresar {
+    color: #FFFFFF;
+    padding: 3px 45px;
+    border-radius: 30px;
+    background-color: #2C3197;
+}
+
+.submenu-container{
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background: linear-gradient(to bottom, #2C3197, #0E1031);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.submenu li {
+    padding: 10px 0px;
+}
+
+.submenu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu-container:hover .submenu {
+    display: block;
+    z-index: 1; /* Asegura que el submenú se muestre sobre otros elementos */
+}
+
+.carrito-compras{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    padding: 5px 10px;
+    background-color: #FF0008;
+    border-radius: 25px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.carrito-compras p{
+    color: #FFFFFF;
+    padding: 0 15px;
+}
+
+/* Ocultar los íconos del menú en modo normal */
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+/* Hover en los enlaces */
+.mostrar-menu:hover,
+.esconder-menu:hover,
+.menu a:hover,
+.menu a.Ingresar:hover {
+    color: #FF0008;
+}
+
+/* Ocultar el checkbox */
+#check {
+    display: none;
+}
+
+/*================================================================*/
+
+.contenedor-carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background: linear-gradient(135deg, #FFFFFF, #F8F8F8);
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.4);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px 0 0 15px;
+}
+
+.encabezado-carrito {
+    background: linear-gradient(90deg, #FE0008, #D40006);
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.encabezado-carrito h1 {
+    margin: 0;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.encabezado-carrito h1::before {
+    content: "🛒";
+    font-size: 24px;
+}
+
+.barra-informacion {
+    background-color: #2C3197;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.barra-informacion span {
+    font-size: 14px;
+}
+
+.boton-borrar-todo {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.icono-borrar {
+    width: 16px; 
+    height: 16px;
+    margin-right: 5px; 
+    margin-top: -3px;
+}
+
+.productos-carrito {
+    padding: 15px;
+    flex-grow: 1; 
+    overflow-y: auto;
+    font-weight: bold;
+}
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+}
+
+.contenido-producto {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.imagen-producto {
+    max-width: 170px;
+    height: 120px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.informacion-producto {
+    flex: 1;
+}
+
+.informacion-producto h2 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.informacion-producto .enlace-informacion {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.precio-producto {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2C3197;
+}
+
+.cantidad-producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6em;
+}   
+
+.cantidad-producto button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+
+.cantidad-producto .cantidad {
+    font-weight: bold; 
+    font-size: 16px; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-family: 'Lato', sans-serif;
+}
+
+.pie-carrito {
+    background: linear-gradient(90deg, #FE0008, #D40006);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.informacion-descuento {
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.boton-comprar {
+    background: #2C3197;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 90%;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.boton-comprar:hover {
+    background: #1A237E;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.informacion-producto .enlace-informacion {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+    cursor: pointer; 
+}
+.descripcion {
+    font-weight: normal; 
+    font-size: 12px; 
+    color: #333; 
+    margin-top: 5px; 
+    font-family: 'Roboto', sans-serif;
+}
+/* Clase para mostrar el carrito */
+.contenedor-carrito.mostrar {
+    transform: translateX(0); /* Moverlo a la vista */
+}
+
+/* Botón de cierre */
+.cerrar-carrito {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cerrar-carrito:hover {
+    transform: rotate(90deg);
+    color: #FFC1C1;
+}
+/* Oscurecer el fondo al abrir el carrito */
+.fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1500; /* Debajo del carrito pero encima de todo lo demás */
+    display: none; /* Oculto inicialmente */
+}
+
+body .uwy.userway_p1 .userway_buttons_wrapper {
+    top: auto !important;
+    right: auto;
+    bottom: 13px !important;
+    left: calc(100vw - 21px);
+    transform: translate(-100%);
+}
+
+/*================================================================*/
+
+@media(max-width: 768px) {
+    /* Mostrar íconos del menú en pantallas pequeñas */
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+    }
+
+    /* El menú aparece como un panel deslizante */
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 50px 0;
+        z-index: 100;
+        transition: right 0.8s ease;
+        background-color: #FF0008;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;   
+        margin-left: auto;
+    }
+
+    /* Mostrar enlaces del menú en bloque */
+    .menu a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    /* Estilos del ícono de cierre */
+    .esconder-menu{
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: #FFFFFF;
+    }
+
+    /* Mostrar el menú al activar el checkbox */
+    #check:checked ~ .menu {
+        right: 0;  /* Mover el menú dentro de la vista */
+    }
+
+    .mostrar-menu:hover,
+    .esconder-menu:hover,
+    .menu a:hover,
+    .menu a.Ingresar:hover {
+        color: #000000;
+    }
+}

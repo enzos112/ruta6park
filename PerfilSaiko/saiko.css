@@ -1,0 +1,529 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: kadwa;
+}
+
+/* DESCRIPCIÓN DEL RESTAURANTE */
+
+.saiko-container{
+    max-width: 100%;
+    height: 100%;
+    margin: 2em 7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parte izquierda */
+.saiko-description{
+    max-width: 17%;
+    height: 500px;
+    background: linear-gradient(to bottom, transparent 30%, #FE0008 30%, #980005 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    padding: 1.5em;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+}
+
+.datos-saiko{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.datos-saiko h2{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.datos-saiko h3{
+    font-weight: normal;
+    font-size: 1.4em;
+}
+
+.stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    gap: 0.2em;
+    color: #FFF001;
+}
+
+.redes-sociales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.redes-sociales i{
+    padding: 0.3em;
+    cursor: pointer;
+}
+
+/* Parte derecha */
+.datos-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 4em;
+}
+
+.datos-container .titulo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5em;
+    line-height: 4.5em;
+}
+
+.datos-container .titulo h2{
+    font-size: 4.5em;
+}
+
+.datos-container .titulo h3{
+    font-weight: normal;
+    font-size: 2.5em;
+    margin-top: 0.5em;
+}
+
+.datos-contacto h3{
+    color: #FE0008;
+}
+
+.datos-contacto span{
+    font-weight: bold;
+}
+
+.datos-contacto li{
+    margin-left: 3.5em;
+}
+
+/* MENU DE LOS MAS POPULARES */
+.populares-container{
+    max-width: 100%;
+    height: auto;
+    margin: 2em 3em;
+}
+
+.populares-container .titulo {
+    font-size: 2em;
+    line-height: 3em;
+    margin-left: 2em;
+}
+
+.populares-container .titulo p{
+    color: #2C3197;
+    font-weight: bold;
+}
+
+.populares-container .titulo span{
+    color: #FFFFFF;
+    text-shadow: 
+    -2px -2px 0 #2C3197,  
+    2px -2px 0 #2C3197,
+    -2px 2px 0 #2C3197,
+    2px 2px 0 #2C3197;    
+}
+
+/* Platos */
+.comida-container{
+    max-width: 100%;
+    height: auto;
+    margin: 0 4em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.comida{
+    width: 45%;
+    height: 18em;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.comida .img-comida {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 20px;
+    display: flex;
+    margin-left: 1em;
+}
+
+.img-comida img{
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img-comida i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2em;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.img-comida i:hover{
+    color: #FE0008;
+    transform: scale(1.1);
+}
+
+.descripcion-comida{
+    position: relative;
+    width: 50%;
+    max-height: 260px;
+    padding: 0 2em;
+}
+
+.descripcion-comida h3{
+    opacity: 40%;
+}
+
+.descripcion-comida p{
+    font-size: 13px;
+    line-height: 1.5em;
+}
+
+.descripcion-comida span{
+    font-weight: bold;
+}
+
+.descripcion-comida h4{
+    font-size: 2em;
+}
+
+.more{
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+}
+
+.more i{
+    font-size: 2.5em;
+    color: #FE0008;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;   
+}
+
+.more i:hover{
+    color: #2C3197;
+    transform: scale(1.1);
+}
+
+.populares-container .titulo-2 {
+    font-size: 2em;
+    line-height: 3em;
+    margin-left: 2em;
+}
+
+.populares-container .titulo-2 p{
+    color: #980005;
+    font-weight: bold;
+}
+
+.titulo-2 span{
+    color: #FFFFFF;
+    text-shadow: 
+    -2px -2px 0 #980005,  
+    2px -2px 0 #980005,
+    -2px 2px 0 #980005,
+    2px 2px 0 #980005;    
+}
+
+/* Estilos base */
+* {
+    padding: 0;
+    margin: 0;
+    font-size: kadwa;
+}
+
+/* DESCRIPCIÓN DEL RESTAURANTE */
+.saiko-container {
+    max-width: 100%;
+    height: 100%;
+    margin: 2em 7em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+body .uwy.userway_p1 .userway_buttons_wrapper {
+    top: auto !important;
+    right: auto;
+    bottom: 13px !important;
+    left: calc(100vw - 21px);
+    transform: translate(-100%);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .saiko-container {
+        margin: 2em 4em;
+    }
+
+    .datos-container .titulo h2 {
+        font-size: 3.5em;
+    }
+
+    .datos-container .titulo h3 {
+        font-size: 2em;
+    }
+
+    .comida {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .saiko-container {
+        margin: 2em 2em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .saiko-description {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 2em;
+        padding: 2em 0;
+    }
+
+    .datos-container {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .datos-container .titulo {
+        flex-direction: column;
+        gap: 0.2em;
+        line-height: 1.2em;
+    }
+
+    .datos-contacto li {
+        margin-left: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .populares-container {
+        margin: 2em 1em;
+    }
+
+    .comida-container {
+        margin: 0 1em;
+    }
+
+    .comida {
+        flex-direction: column;
+        height: auto;
+        padding: 2em 0;
+    }
+
+    .comida .img-comida {
+        width: 220px;
+        height: 220px;
+        margin: 0 0 1em 0;
+    }
+
+    .descripcion-comida {
+        width: 80%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .more {
+        position: relative;
+        right: 0;
+        margin-top: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .saiko-container {
+        margin: 1em;
+    }
+
+    .img {
+        width: 160px;
+        height: 160px;
+        padding: 1em;
+    }
+
+    .datos-saiko h2 {
+        font-size: 1.5em;
+    }
+
+    .datos-saiko h3 {
+        font-size: 1.2em;
+    }
+
+    .stars {
+        font-size: 1.5em;
+    }
+
+    .redes-sociales {
+        font-size: 1.5em;
+    }
+
+    .datos-container .titulo h2 {
+        font-size: 2.5em;
+    }
+
+    .datos-container .titulo h3 {
+        font-size: 1.5em;
+    }
+
+    .populares-container .titulo,
+    .populares-container .titulo-2 {
+        font-size: 1.5em;
+        margin-left: 1em;
+    }
+
+    .comida .img-comida {
+        width: 180px;
+        height: 180px;
+    }
+
+    .descripcion-comida h4 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .saiko-container {
+        margin: 0.5em;
+    }
+
+    .saiko-description {
+        max-width: 260px;
+    }
+
+    .img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .datos-saiko h2 {
+        font-size: 1.2em;
+    }
+
+    .datos-saiko h3 {
+        font-size: 1em;
+    }
+
+    .stars {
+        font-size: 1.2em;
+    }
+
+    .redes-sociales {
+        font-size: 1.2em;
+    }
+
+    .datos-container .titulo h2 {
+        font-size: 2em;
+    }
+
+    .datos-container .titulo h3 {
+        font-size: 1.2em;
+    }
+
+    .populares-container .titulo,
+    .populares-container .titulo-2 {
+        font-size: 1.2em;
+        margin-left: 0.5em;
+        line-height: 2em;
+    }
+
+    .comida {
+        margin: 1em 0.5em;
+    }
+
+    .comida .img-comida {
+        width: 160px;
+        height: 160px;
+    }
+
+    .descripcion-comida {
+        width: 90%;
+    }
+
+    .descripcion-comida h3 {
+        font-size: 0.9em;
+    }
+
+    .descripcion-comida p {
+        font-size: 12px;
+    }
+
+    .descripcion-comida h4 {
+        font-size: 1.2em;
+    }
+
+    .more i {
+        font-size: 2em;
+    }
+}
+
+/* Ajustes para la interactividad en dispositivos táctiles */
+@media (hover: none) {
+    .img-comida i:hover,
+    .more i:hover {
+        transform: none;
+    }
+
+    .img-comida i:active,
+    .more i:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Optimizaciones para mejor rendimiento */
+.img-comida img,
+.img img {
+    object-fit: cover;
+}
+
+.comida {
+    transition: transform 0.3s ease;
+}
+
+.descripcion-comida {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
